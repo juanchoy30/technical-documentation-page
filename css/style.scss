@@ -1,0 +1,13 @@
+//User Story #15: My Technical Documentation page should use at least one media query.
+
+//Colours
+
+//mixins
+@mixin margin-zero($up-down, $left-right) {
+    margin: 0 auto;
+    padding: $up-down $left-right;
+}
+
+.images {
+    text-align: center;
+}
