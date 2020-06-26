@@ -1,6 +1,10 @@
 //User Story #15: My Technical Documentation page should use at least one media query.
 
 //Colours
+$title-color: #706f6e;
+$Subtitle-color: #c7c3c0;
+$nav-color: #ad9684;
+$nav-bgc: #fafafa;
 
 //mixins
 @mixin margin-zero($up-down, $left-right) {
@@ -8,6 +12,117 @@
     padding: $up-down $left-right;
 }
 
+#navbar {
+    @include margin-zero(30px, 15px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    min-width: 290px;
+    height: 100%;
+    left: 0px;
+    border-right: 1px solid $Subtitle-color;
+    background-color: $nav-bgc;
+    h1 {
+        font-size: 1.8em;
+    }
+    .navlist li a {
+        color: $nav-color;
+    }
+    .navlist li a:hover {
+        color: $title-color;
+        font-weight: bold;
+    }
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    margin-right: 10px;
+    padding: 25px;
+    header {
+        color:$title-color;
+        margin-left: -5px;
+    }
+    header:hover {
+        transform: scale(1.02, 1.02);
+        margin-left: 0px;
+    }
+    section {
+        text-align: justify;
+        h4 {
+            margin-top: 10px;
+            color:$Subtitle-color;
+        }
+        h4:hover {
+            transform: scale(1.02, 1.02);
+            margin-left: 7px;
+        }
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 10px;
+            var {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 .images {
     text-align: center;
+    @include margin-zero(10px, 0px);
+    #fire-triangle, #fire-water-density {
+        width: 500px;
+    }
+    #Continuity-Equation {
+        width: 400px;
+    }
+}
+
+.images:hover {
+    transform: scale(1.02, 1.02);
+}
+
+.where {
+    @include margin-zero(0px, 0px)
+}
+
+// Media query for small screen sizes
+@media only screen and (max-width: 600px) {
+    #navbar{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-height: 345px;
+        border-right: none;
+        border-bottom: 1px solid $Subtitle-color;
+    }
+    #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 330px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .images{
+        @include margin-zero(30px, 5px);
+        #fire-triangle, #Continuity-Equation, #area-of-sprinkler-operation, #fire-water-density {
+            width: 300px;
+        }
+    }
+  }
+
+
+  //Hides the equations with code tag
+pre {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }

@@ -9,7 +9,7 @@
 
         <!-- build:css css/main.css -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- endbuild -->
     </head>
     <body>
@@ -19,19 +19,19 @@
                 <!--contains text that describes the topic of the technical documentation.-->
             </header>
 
-            <ul>
-                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-                <li><a class="nav-link" href="#Basic_Fire_Concepts">Basic Fire Concepts</a></li>
-                <li><a class="nav-link" href="#Basic_Extinguishing_Concepts">Basic Extinguishing Concepts</a></li>
-                <li><a class="nav-link" href="#Hydraulic_Fundamentals">Hydraulic Fundamentals</a></li>
-                <li><a class="nav-link" href="#Designing_Fundamentals">Designing fundamentals</a></li>
+            <ul class="nav flex-column navlist">
+                <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Basic_Fire_Concepts">Basic Fire Concepts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Basic_Extinguishing_Concepts">Basic Extinguishing Concepts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Hydraulic_Fundamentals">Hydraulic Fundamentals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Designing_Fundamentals">Designing fundamentals</a></li>
             </ul>
             <!--User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").-->
             <!--User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.-->
             <!--User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.-->
         </nav>
 
-        <main id="main-doc" class="container">
+        <main id="main-doc">
             <section class="main-section" id="Introduction"> <!--Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").-->
                 <header><h3>Introduction</h3></header>
     
@@ -51,42 +51,59 @@
                 <header><h3>Basic Fire Concepts</h3></header>
     
                 <h4>Fire</h4>
-                <p>It is a set of incandescent particles of a combustible material, which emit light and heat, produced by an oxidizing chemical reaction. There must exist a proper mixture of combustible material and oxygen, and enough temperature to ignite it.</p>
-                <div class="images">
-                    <img src="images/fire-triangle.png" alt="Fire triangle and fire tetrahedron">
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <p>It is a set of incandescent particles of a combustible material, which emit light and heat, produced by an oxidizing chemical reaction. There must exist a proper mixture of combustible material and oxygen, and enough temperature to ignite it.</p>
+                        <ul>
+                            <li><b>Class A:</b> fires involving solid materials such as wood, paper or textiles.</li>
+                            <li><b>Class B:</b> fires involving flammable liquids such as petrol, diesel or oils.</li>
+                            <li><b>Class C:</b> fires involving gases.</li>
+                            <li><b>Class D:</b> fires involving metals.</li>
+                            <li><b>Class E:</b> fires involving live electrical apparatus.</li>
+                        </ul>
+                    </div>
+                    <div class="images col-12 col-xl-6">
+                        <img src="images/fire-triangle.png" id="fire-triangle" alt="Fire triangle and fire tetrahedron">
+                    </div>
                 </div>
-                <ul>
-                    <li><b>Class A:</b> fires involving solid materials such as wood, paper or textiles.</li>
-                    <li><b>Class B:</b> fires involving flammable liquids such as petrol, diesel or oils.</li>
-                    <li><b>Class C:</b> fires involving gases.</li>
-                    <li><b>Class D:</b> fires involving metals.</li>
-                    <li><b>Class E:</b> fires involving live electrical apparatus.</li>
-                </ul>
                 
                 <h4> <abbr title="Boiling liquid expanding vapor explosion">BLEVE</abbr></h4>
                 <p>A boiling liquid expanding vapor explosion is an explosion caused by the rupture of a vessel containing a pressurized liquid that has reached temperatures above its boiling point.[1] Because the boiling point of a liquid rises with pressure, the contents of the pressurized vessel can remain liquid so long as the vessel is intact. If the vessel's integrity is compromised, the loss of pressure and dropping boiling point can cause the liquid to rapidly convert to gas and expand extremely rapidly.</p>
     
-                <h4>Boil over</h4>
-                <p>It happens when the density and boiling point of a combustible liquid is inferior to that of the water. Therefore, the hazardous liquid will float over the water. The heat transferred will abruptly evaporate the water making an explosion.</p>
-    
-                <h4>Slopover</h4>
-                <p>It happens when water meets ignited combustible. Water instantaniusly evaporate causing an explosion</p>
-    
-                <h4>Combustible material</h4>
-                <p>Substances that when evaporate and mix with oxygen are able to maintain a combustion reaction.</p>
-    
-                <h4>Volatility </h4>
-                <p>Tendency of a substance to evaporate.</p>
-    
-                <h4>Flash point</h4>
-                <p>Temperature at which a flammable or combustible liquid might ignite.</p>
-    
-                <h4>Flammable liquids</h4>
-                <p>Liquids with a flash point of less than 100 °F (37.8 °C) : Gasoline, solvents, acetone.</p>
-    
-                <h4>Combustible liquids</h4>
-                <p>Liquids with a flash point of more than 100 °F (37.8 °C) : Diesel, alcohol.</p>
-    
+                <div class="row">
+                    <div class="col-12 col-sm-8 col-md-4">
+                        <h4>Boil over</h4>
+                        <p>It happens when the density and boiling point of a combustible liquid is inferior to that of the water. Therefore, the hazardous liquid will float over the water. The heat transferred will abruptly evaporate the water making an explosion.</p>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                        <h4>Slopover</h4>
+                        <p>It happens when water meets ignited combustible. Water instantaniusly evaporate causing an explosion.</p>
+                    </div>
+                    <div class="col-12 col-sm-7 col-md-3">
+                        <h4>Combustible material</h4>
+                        <p>Substances that when evaporate and mix with oxygen are able to maintain a combustion reaction.</p>
+                    </div>
+                    <div class="col-12 col-sm-5 col-md-2 col-lg-3">
+                        <h4>Volatility </h4>
+                        <p>Tendency of a substance to evaporate. It is related with the vapor pressure</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                        <h4>Flash point</h4>
+                        <p>Temperature at which a flammable or combustible liquid might ignite.</p>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <h4>Flammable liquids</h4>
+                        <p>Liquids with a flash point of less than 100 °F (37.8 °C) : Gasoline, solvents, acetone.</p>        
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <h4>Combustible liquids</h4>
+                        <p>Liquids with a flash point of more than 100 °F (37.8 °C) : Diesel, alcohol.</p>        
+                    </div>
+                </div>
+
             </section>
     
             <section class="main-section" id="Basic_Extinguishing_Concepts"> <!--Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").-->
@@ -121,7 +138,7 @@
                         Q = V / t
                     </code>
                 </pre>
-                <p>Where:</p> 
+                <p class="where">Where:</p> 
                 <ul>
                     <li><var>Q</var> is flow</li>
                     <li><var>A</var> is area</li>
@@ -138,29 +155,35 @@
                         P = F / A
                     </code>
                 </pre>
-                <p>Where: </p>
+                <p class="where">Where: </p>
                 <ul>
                     <li><var>P</var> is pressure</li>
                     <li><var>F</var> is force</li>
                     <li><var>A</var> is area</li>
                 </ul>
                 
-                <h4>Static Pressure</h4>
-                <p>It is the pressure that the fluid applies on all directions inside a pipe, axial and radial (Over walls of pipe). If there is a hole on the wall of the pipe, just as the case of a sprinkler, this pressure energy will transform into velocity energy, so that explosive effect of sprinklers can take place.</p>
-    
-                <h4>Velocity Pressure</h4>
-                <p>This pressure acts axially, in the direction of the flow. It is caused for the movement of the flux</p>
-    
-                <h4>Total Pressure</h4>
-                <p>The sum of both pressures.</p>
-    
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Static Pressure</h4>
+                        <p>It is the pressure that the fluid applies on all directions inside a pipe, axial and radial (Over walls of pipe). If there is a hole on the wall of the pipe, just as the case of a sprinkler, this pressure energy will transform into velocity energy, so that explosive effect of sprinklers can take place.</p>        
+                    </div>
+                    <div class="col-12 col-sm-7">
+                        <h4>Velocity Pressure</h4>
+                        <p>This pressure acts axially, in the direction of the flow. It is caused for the movement of the flux</p>        
+                    </div>
+                    <div class="col-12 col-sm-5">
+                        <h4>Total Pressure</h4>
+                        <p>The sum of both pressures.</p>        
+                    </div>
+                </div>
+
                 <h4>Hydraulic losses</h4>
                 <p>Energy dissipation due to friction of water on pipe walls, heat, vibration and change of direction of the flow. The most important and considered in calculations are the losses for friction and the losses for pipe fittings and accessories</p>
                 <i>$$p= 4.52 { Q^{1.85} L \over C^{1.85} d^{4.87}}$$</i>
                 <pre>
                     <code>p = 4.52 * (( Q^(1.85) * L ) / ( C^(1.85) * d(4.87 ))</code>
                 </pre>
-                <p>where:</p>
+                <p class="where">where:</p>
                 <ul>
                     <li><var>p</var> is the lost for friction</li>
                     <li><var>Q</var> is the flow rate</li>
@@ -173,30 +196,37 @@
                 <p>They happen due to the change of diameters and direction of the flow inside of piping systems. NFPA 13 and 15 indicate that this losses can be estimated by the <em>equivalent length method</em>, which converts this losses in friction losses through the pipe length. </p>
     
                 <h4>The equation of continuity</h4>
-                <p>The flow inside of a pipeline must be constant, independently of the sectional diameter. The amount of liquid that enters must be the same that goes out.</p>
-                <img src="images/Continuity-Equation.jpg" alt="Equation of continuity diagram">
-                $$A1V1=A2V2$$
-                $$Q1=Q2$$
-                <pre>
-                    <code>
-                        A_1*V_1=A_2*V_2
-                        Q_1=Q_2
-                    </code>
-                </pre>                                                 
-                <p>Where:</p>
-                <ul>
-                    <li><var>A1</var> and <var>A2</var> are respectively the initial and final transversal areas.</li>
-                    <li><var>V1</var> and <var>V2</var> are respectively the initial and final velocities.</li>
-                    <li><var>Q1</var> and <var>Q2</var> are respectively the initial and final flow rates. </li>
-                </ul>
-    
+
+                <div class="row">
+                    <div class="images col-12 col-xl-6">
+                        <img src="images/Continuity-Equation.jpg" id="Continuity-Equation" alt="Equation of continuity diagram">
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <p>The flow inside of a pipeline must be constant, independently of the sectional diameter. The amount of liquid that enters must be the same that goes out.</p>
+                        $$A1V1=A2V2$$
+                        $$Q1=Q2$$
+                        <pre>
+                            <code>
+                                A_1*V_1=A_2*V_2
+                                Q_1=Q_2
+                            </code>
+                        </pre>                                                 
+                        <p class="where">Where:</p>
+                        <ul>
+                            <li><var>A1</var> and <var>A2</var> are respectively the initial and final transversal areas.</li>
+                            <li><var>V1</var> and <var>V2</var> are respectively the initial and final velocities.</li>
+                            <li><var>Q1</var> and <var>Q2</var> are respectively the initial and final flow rates. </li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <h4>Bernoulli Equation</h4>
                 <p>Bernoulli theorem states that within a line of flux the energy must be constant.</p>
                 $${V_A^{2} \over 2g} + {P_A \over W} + Z_A =  {V_B^{2} \over 2g} + {P_B \over W} + Z_B + h_{AB}$$
                 <pre>
                     <code>〖V_A〗^2/(2.g)+P_A/W+Z_A=〖V_B〗^2/(2.g)+P_B/W+Z_B+h_AB</code>
                 </pre>
-                <p>Where:</p>
+                <p class="where">Where:</p>
                 <ul>
                     <li><var>V<sub>A</sub></var> and <var>V<sub>B</sub></var> are respectively the initial and final velocities.</li>
                     <li><var>g</var> is the gravitational acceleration.</li>
@@ -211,7 +241,7 @@
                 <pre>
                     <code>Q=K*sqr(P)</code>
                 </pre>
-                <p>Where:</p>
+                <p class="where">Where:</p>
                 <ul>
                     <li><var>Q</var> is the flow rate</li>
                     <li><var>P</var> is pressure</li>
@@ -224,7 +254,7 @@
                         Q1/Q2=sqr(p1/p2)
                     </code>
                 </pre>
-                <p>Where:</p>
+                <p class="where">Where:</p>
                 <ul>
                     <li><var>Q<sub>1</sub></var> and <var>Q<sub>2</sub></var> are respectively the initial and final flow rates. </li>
                     <li><var>P<sub>1</sub></var> and <var>P<sub>2</sub></var> are respectively the initial and final pressures.</li>
@@ -242,15 +272,33 @@
                 <p><em><abbr title="Petroles de Venezuela">PDVSA</abbr> IR-M-03</em> indicates that all fire protection systems depending on water as extinguishing agent are based on the principle that only one major fire scenario may occur at a determine time within an installation. Therefore, it is mandatory to determine which of the possible scenarios requires more pressure or flow rate, and design the systems with these necessities.</p>
     
                 <h4>Area of sprinkler operation</h4>
-                <p>It is the area where the designer assumes it may occur a fire scenario. It is part of the designing process to estimate which area is hydraulically unfavorable</p>
-                <p>It must be assumed that only the sprinklers contained within this area activate during a fire scenario. This way, the flow rate and pressure required by the system on the current fire scenario can be calculated.</p>
-                <img src="images/area-of-sprinkler-operation.bmp" alt="Area of sprinkler operation">
-    
+
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <p>It is the area where the designer assumes it may occur a fire scenario. It is part of the designing process to estimate which area is hydraulically unfavorable</p>
+                        <p>It must be assumed that only the sprinklers contained within this area activate during a fire scenario. This way, the flow rate and pressure required by the system on the current fire scenario can be calculated.</p>
+                    </div>
+                    <div class="images col-12 col-lg-6">
+                        <img src="images/area-of-sprinkler-operation.bmp" id="area-of-sprinkler-operation" alt="Area of sprinkler operation">
+                    </div>
+                </div>
+
+
+
                 <h4>Application Density</h4>
-                <p>It is the flow rate per unit area discharged by a fire protection system. It is one of the most important parameters for a sprinkler or deluxed system calculation. It is needed in order to calculate the water flow rate required.</p>
-                <p>NFPA 13 stablishes for sprinkler systems that minimum densities depend on the type of hazard and the area of sprinkler operation:</p>
-                <img src="images/fire-water-density.png" alt="Fire water density">
-                <p>NFPA 15 stablishes that the minimum density depends on the purpose of the design; whether it is extinction, control or cooling, and the nature of the equipment to be protected by the system</p>
+
+                <div class="row">
+                    <div class="images col-12 col-xl-6">
+                        <img src="images/fire-water-density.png" id="fire-water-density" alt="Fire water density">
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <p>It is the flow rate per unit area discharged by a fire protection system. It is one of the most important parameters for a sprinkler or deluxed system calculation. It is needed in order to calculate the water flow rate required.</p>
+                        <p>NFPA 13 stablishes for sprinkler systems that minimum densities depend on the type of hazard and the area of sprinkler operation:</p>
+                        <p>NFPA 15 stablishes that the minimum density depends on the purpose of the design; whether it is extinction, control or cooling, and the nature of the equipment to be protected by the system</p>
+                    </div>
+
+                </div>
+
     
                 <h4>Hardy Cross Method</h4>
                 <p>The Hardy Cross method is an iterative method for determining the flow in pipe network systems where the inputs and outputs are known, but the flow inside the network is unknown.</p>
