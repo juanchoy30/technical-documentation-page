@@ -5,6 +5,11 @@ $title-color: #706f6e;
 $Subtitle-color: #c7c3c0;
 $nav-color: #ad9684;
 $nav-bgc: #fafafa;
+$dark-theme-bg-color : #0a0b2b;
+$dark-theme-title-color: #d8d7e0;
+$dark-theme-Subtitle-color:#c2c1c9;
+$dark-theme-font-color: #ffffff;
+$dark-theme-nav-color:#bab8b7;
 
 //mixins
 @mixin margin-zero($up-down, $left-right) {
@@ -37,12 +42,12 @@ $nav-bgc: #fafafa;
 
 #main-doc {
     position: absolute;
-    margin-left: 310px;
+    margin-left: 300px;
     margin-right: 10px;
     padding: 25px;
     header {
         color:$title-color;
-        margin-left: -5px;
+        margin: 30px 0px 10px -5px;
     }
     header:hover {
         transform: scale(1.02, 1.02);
@@ -51,7 +56,7 @@ $nav-bgc: #fafafa;
     section {
         text-align: justify;
         h4 {
-            margin-top: 10px;
+            margin: 30px 0px 15px 0px;
             color:$Subtitle-color;
         }
         h4:hover {
@@ -60,11 +65,16 @@ $nav-bgc: #fafafa;
         }
         ul {
             list-style: none;
-            margin-left: 0;
+            margin: 0;
             padding-left: 10px;
+            padding-top: 0px;
             var {
                 font-weight: bold;
             }
+        }
+        p{
+            margin: 2px;
+            padding: 1px;
         }
     }
 }
@@ -125,4 +135,21 @@ pre {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.dark-theme {
+    background-color: $dark-theme-bg-color !important;
+    color: $dark-theme-font-color !important;
+    header {
+        color:$dark-theme-title-color !important;
+    }
+    h4 {
+        color:$dark-theme-Subtitle-color !important;
+    }
+    .navlist li a {
+        color: $dark-theme-nav-color !important;
+    }
+    .navlist li a:hover {
+        color: $dark-theme-title-color !important;
+    }
 }
