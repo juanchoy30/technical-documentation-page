@@ -86,7 +86,7 @@
     .images #fire-triangle, .images #Continuity-Equation, .images #area-of-sprinkler-operation, .images #fire-water-density {
       width: 300px; } }
 
-pre {
+.hiddenFromPage {
   position: absolute;
   width: 1px;
   height: 1px;

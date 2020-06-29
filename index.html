@@ -30,8 +30,8 @@
             <!--User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.-->
             <!--User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.-->
 
-            <button class="btn btn-dark" id="dark-theme-button">Dark Theme</button>
-            <button class="btn btn-info" id="light-theme-button">Light Theme</button>
+            <button class="btn btn-dark mt-3" id="dark-theme-button">Dark Theme</button>
+            <button class="btn btn-info mt-3 hiddenFromPage" id="light-theme-button">Light Theme</button>
         </nav>
 
 
@@ -163,7 +163,7 @@
                         <p>It is the volume of fluid which passes per unit time:</p>
                         <i>$$Q={Aυ}$$</i>
                         <i>$$Q={V \over t}$$</i>
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>
                                 Q = A * υ
                                 Q = V / t
@@ -182,7 +182,7 @@
                         <h4>Pressure</h4>
                         <p>Pressure is the force applied perpendicular to the surface of an object per unit area over which that force is distributed. Gauge pressure is the pressure relative to the ambient pressure</p>
                         <i>$$P={F \over A}$$</i>
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>
                                 P = F / A
                             </code>
@@ -220,7 +220,7 @@
                         <i>$$p= 4.52 { Q^{1.85} L \over C^{1.85} d^{4.87}}$$</i>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>p = 4.52 * (( Q^(1.85) * L ) / ( C^(1.85) * d(4.87 ))</code>
                         </pre>
                         <p class="where">where:</p>
@@ -246,7 +246,7 @@
                         <p>The flow inside of a pipeline must be constant, independently of the sectional diameter. The amount of liquid that enters must be the same that goes out.</p>
                         $$A1V1=A2V2$$
                         $$Q1=Q2$$
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>
                                 A_1*V_1=A_2*V_2
                                 Q_1=Q_2
@@ -269,7 +269,7 @@
                         <i>$${V_A^{2} \over 2g} + {P_A \over W} + Z_A =  {V_B^{2} \over 2g} + {P_B \over W} + Z_B + h_{AB}$$</i>                    
                     </div>
                     <div class="col-12 col-xl-6">
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>〖V_A〗^2/(2.g)+P_A/W+Z_A=〖V_B〗^2/(2.g)+P_B/W+Z_B+h_AB</code>
                         </pre>
                         <p class="where">Where:</p>
@@ -288,7 +288,7 @@
                     <div class="col-12 col-xl-6">
                         <p>When the flux flows through a hole in a pipe wall, the potential energy of its pressure becomes kinetic energy outside of the pipe, because the pressure inside the pipeline is bigger than that of the atmosphere. Therefore, it can be stablished that the flow rate of the liquid that flows through the hole is directly proportional to the pressure it has. This phenomenon explains the behaviour of sprinklers, and is used in its hydraulic calculation.</p>
                         <i>$$ Q = K \sqrt{P} $$</i>
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>Q=K*sqr(P)</code>
                         </pre>
                         <p class="where">Where:</p>
@@ -301,7 +301,7 @@
                     <div class="col-12 col-xl-6">
                         <p>When the flux is divided by a TEE fitting, pressure and flow rate must be balanced through:</p>
                         $$ {Q_1 \over Q_2} =  \sqrt{P_1 \over P_2} $$
-                        <pre>
+                        <pre class="hiddenFromPage">
                             <code>
                                 Q1/Q2=sqr(p1/p2)
                             </code>
